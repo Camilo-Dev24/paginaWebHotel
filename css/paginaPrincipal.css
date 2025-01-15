@@ -7,70 +7,20 @@
 
 
 /*Diseño del Nav*/
-.container-main{
+.container-nav{
     width: 100%;
-    height: 15vh;
+    height: 14vh;
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(59, 59, 59);
+    position: relative;
     /* outline: solid 1px red; */
 }
 
-.nav-information{
-    width: 100%;
-    height: 35%;
-    /* outline: 1px solid green; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    /* justify-content: space-around; */
-    position: relative;
-}
-
-.nav-information input{
-    border-color: black;
-    margin-left: 5%;
-}
-
-.nav-information a{
-    width: 25%;
-    text-decoration: none;
-    color: white;
-    margin-left: 1%;
-    font-size: 20px;
-}
-
-.nav-information p{
-    width: 25%;
-    color: white;
-    font-size: 20px;
-    margin-left: 5%;
-}
-
-.nav-information h3{
-    width: 4%;
-    color: white;
-    margin-top: 0.6%;
-    font-size: 18px;
-    /* outline: solid 1px green; */
-}
-
-.pictures-nav{
-    width: 15%;
-    /* outline: 1px red solid; */
-    display: flex;
-    margin-left:10% ;
-    gap: 10%;
-}
-
-.pictures-nav img{
-    width:20%;
-}
-
-/*Down part-main*/
+/*Style nav*/
 .about-hotel{
     width: 100%;
-    height: 65%;
+    height: 100%;
     outline: 2px solid rgb(1, 0, 3); 
     display: flex;
     flex-wrap: nowrap;
@@ -82,8 +32,8 @@
     width: 15%;
     text-align: center;
     color: white;
-    font-size: 20px;
-    margin-left:5%;
+    font-size: 23px;
+    margin-left:8%;
 }
 
 .section-about-hotel{
@@ -94,16 +44,55 @@
 }
 
 .section-about-hotel a{
+    position: relative;
     text-decoration: none;
     color: white;
     margin-top: 1%;
+    font-size: 20px;
+}
+
+/* animacion enlaces */
+
+.section-about-hotel a::before, 
+.section-about-hotel a::after {
+    border-bottom: 3px solid #82644c;
+    content: "";
+    position: absolute;
+    transition: ease-in-out 1s;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.section-about-hotel a::before {
+    width:90% ;
+    bottom: -0px;
+    right: 0;
+    
+}
+.section-about-hotel a::after {
+    width: 60%;
+    bottom: -6px;
+    left: 0;
+}
+
+.section-about-hotel a:hover::before {
+    opacity: 1;
+    width: 70%;
+}
+.section-about-hotel a:hover::after {
+    opacity: 1;
+    width: 40%;
 }
 
 .section-about-hotel button{
-    width: 20%;
-    background-color: goldenrod;
+    width: 25%;
+    background-color: #25d366;
     color: white;
-    padding: 7px 11px 7px 11px
+    padding: 7px 1px 7px 1px;
+    outline: #25d366;
+    font-size: 20px;
+    margin-left: 5%;
+    font-weight: 700;
 }
 
 
